@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elections</th>
+      <th>District</th>
+      <th>Election Date</th>
+      <th>Status</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+        <% @elections.each do |election| %>
+        <% districtId = election.districtId %>
+        <% districtName = @districts.find(election.districtId).name%>
+      <tr>
+        <td><%= election.title %></td>
+        <td><%= districtId %>    <%= districtName %></td>
+        <td><%= election.electionDate ? election.electionDate.strftime("%B %d, %Y") : ""  %></td>
+        <td><%= election.completed ? "voting is closed" : "voting is open" %></td>
+        <td><%= link_to 'View', election %></td>
+        <td><%= link_to 'Edit', edit_election_path(election) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Election', new_election_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Voterid:</strong>
+  <%= @voter.voterId %>
+</p>
+
+<p>
+  <strong>Districtid:</strong>
+  <%= @voter.districtId %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @voter.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @voter.email %>
+</p>
+
+<p>
+  <strong>Passwordhash:</strong>
+  <%= @voter.passwordHash %>
+</p>
+
+<%= link_to 'Edit', edit_voter_path(@voter) %> |
+<%= link_to 'Back', voters_path %>

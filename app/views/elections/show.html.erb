@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Electionid:</strong>
+  <%= @election.electionId %>
+</p>
+
+<p>
+  <strong>Districtid:</strong>
+  <%= @election.districtId %>
+</p>
+
+<p>
+  <strong>Electiondate:</strong>
+  <%= @election.electionDate %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @election.title %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @election.completed %>
+</p>
+
+<label>
+<%= link_to 'Edit', edit_election_path(@election) %> /
+<%= link_to 'Back', elections_path %>
+</label>

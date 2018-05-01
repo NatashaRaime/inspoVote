@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  voterId: 1
+  districtId: 1
+  name: MyString
+  email: MyString
+  passwordHash: MyString
+
+two:
+  voterId: 1
+  districtId: 1
+  name: MyString
+  email: MyString
+  passwordHash: MyString

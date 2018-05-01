@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <title>Inspo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tillana">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <section class="nav">
+  <div class="responsive-nav-social-mobile" data-responsive-toggle="responsive-nav-social" data-hide-for="medium">
+    <div class="responsive-nav-social-mobile-left">
+      <ul class="menu">
+        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-sticky-container>
+    <div class="responsive-nav-social" id="responsive-nav-social" data-sticky data-options="marginTop:0;">
+      <div class="row align-justify align-middle" id="responsive-menu">
+        <div class="responsive-nav-social-left">
+          <ul class="menu vertical medium-horizontal">
+            <li><a href="/">Home</a></li>
+            <li><a href="voters">Register</a></li>
+            <li><a href="candidates">Candidates</a></li>
+            <li><a href="races">Races</a></li>
+            <li><a href="districts">Districts</a></li>
+            <li><a href="elections">Ballots</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <section class="app-frame">
+    <%= yield %>
+   </section>
+  </body>
+</html>

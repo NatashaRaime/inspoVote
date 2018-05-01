@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body, h1 {
+    width: 100%;
+    margin: 2%;
+    padding: 15px;
+    color: rgb(49, 76, 99);
+    font-size: 35px;
+    font-family:"Tillana";
+    text-align: justify;
+    text-align: left;
+}
+
+thead {
+    width: 100%;
+    padding: 10px;
+    margin: 2px;
+    font-size: 22px;
+    color: deepskyblue;
+    border: solid 2px deepskyblue;
+    font-family: "Poiret One";
+    font-weight: bolder;
+}
+.responsive-nav-social-mobile {
+    background: lightskyblue;
+    color: rgb(49, 76, 99);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+  }
+
+a, td{
+    width: 100%;
+    padding: 10px;
+    margin: 2px;
+    font-size: 20px;
+    font-family: "Poiret One";
+    font-weight: bolder;
+}
+
+a:hover {
+    border: solid 2px;
+    color: rgb(49, 76, 99);
+    border-color: lightskyblue;
+    background-color: white;
+}
+ /* {
+    border-left: double 1px gold;
+} */

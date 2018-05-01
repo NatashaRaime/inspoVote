@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stateId: 1
+  name: MyString
+
+two:
+  stateId: 1
+  name: MyString

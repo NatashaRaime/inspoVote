@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  electionId: 1
+  districtId: 1
+  electionDate: 2018-04-30 14:52:16
+  title: MyString
+  completed: false
+
+two:
+  electionId: 1
+  districtId: 1
+  electionDate: 2018-04-30 14:52:16
+  title: MyString
+  completed: false
