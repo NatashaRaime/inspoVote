@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :elections_races
   root "elections#index"
 
   resources :races

@@ -5,25 +5,28 @@
 <table>
   <thead>
     <tr>
-      <th>Raceid</th>
-      <th>Title</th>
-      <th colspan="3"></th>
+      <th>Race</th>
+      <th>  </th>
+      <th>Current Lead</th>
+      <th>  </th>
+      <th>Race Candidate</th>
+      <th>  </th>
+      <th>Votes</th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @races.each do |race| %>
-      <tr>
-        <td><%= race.raceId %></td>
-        <td><%= race.title %></td>
-        <td><%= link_to 'Show', race %></td>
-        <td><%= link_to 'Edit', edit_race_path(race) %></td>
-        <td><%= link_to 'Destroy', race, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <tbody> 
+  <% @races.each do |race| %>
+  <tr>
+       <td><%= race.title %></td>
+    <td><%= link_to 'View', race %></td>
+    <td><%= link_to 'Edit', edit_race_path(race) %></td>
+  </tr>
+  <%end%> 
+  </tr>
+</tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Race', new_race_path %>
+<label><%= link_to 'Create a Race', new_race_path %></label>

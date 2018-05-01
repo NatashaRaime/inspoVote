@@ -132,3 +132,19 @@ elections = [
 elections.each do |election|
     Election.create(election)
 end
+
+rb = [
+    {election_id: 1262, race_id: 10245},
+    {election_id: 1262, race_id: 10242},
+    {election_id: 1262, race_id: 10239},
+    {election_id: 1262, race_id: 10222},
+    {election_id: 2286, race_id: 10242},
+    {election_id: 2286, race_id: 10245},
+    {election_id: 4254, race_id: 10242},
+    {election_id: 4254, race_id: 10239},
+    {election_id: 8622, race_id: 10000}
+]
+
+rb.each do |rb|
+    ElectionsRace.create(rb)
+end
