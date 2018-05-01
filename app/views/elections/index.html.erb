@@ -12,21 +12,27 @@
   </thead>
 
   <tbody>
+        <%etLast = ""%>
         <% @elections.each do |election| %>
+
+        <% if etLast == election.title %>
+        
+        <%else%>
         <% districtId = election.districtId %>
-        <% districtName = @districts.find(election.districtId).name%>
+        <% district = District.find_by(params[:districtId]) %>
       <tr>
         <td><%= election.title %></td>
-        <td><%= districtId %>    <%= districtName %></td>
+        <td><%= district.name %></td>
         <td><%= election.electionDate ? election.electionDate.strftime("%B %d, %Y") : ""  %></td>
         <td><%= election.completed ? "voting is closed" : "voting is open" %></td>
         <td><%= link_to 'View', election %></td>
         <td><%= link_to 'Edit', edit_election_path(election) %></td>
       </tr>
+        <% etLast = election.title %>
+        <%end%>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Election', new_election_path %>

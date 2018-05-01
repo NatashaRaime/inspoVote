@@ -104,7 +104,11 @@ candidates = [
     {candidateId: 12, raceId: 10222, votes: 0, name: "Nigella Lawson"},
     {candidateId: 13, raceId: 10222, votes: 0, name: "Giada Delaurentis"},
     {candidateId: 14, raceId: 10222, votes: 0, name: "Julia Child"},
-    {candidateId: 15, raceId: 10222, votes: 0, name: "Ina Garten"}
+    {candidateId: 15, raceId: 10222, votes: 0, name: "Ina Garten"},
+    {candidateId: 16, raceId: 10000, votes: 0, name: "Santorini"},
+    {candidateId: 17, raceId: 10000, votes: 0, name: "Tokyo"},
+    {candidateId: 18, raceId: 10000, votes: 0, name: "Paris"},
+    {candidateId: 19, raceId: 10000, votes: 0, name: "Berlin"}
 ]
 
 candidates.each do |candidate|
@@ -114,8 +118,10 @@ candidates.each do |candidate|
 races = [
     { raceId: 10245, title: "Best Performer"},
     { raceId: 10242, title: "Best Seattle Celebrity"},
+    { raceId: 10000, title: "Where We Want To Live"},
     { raceId: 10239, title: "Most Influential Washington Mayor"},
     { raceId: 10222, title: "Most Likely To Succeed"}
+
 ]
 
 races.each do |race|
@@ -131,20 +137,4 @@ elections = [
 
 elections.each do |election|
     Election.create(election)
-end
-
-rb = [
-    {election_id: 1262, race_id: 10245},
-    {election_id: 1262, race_id: 10242},
-    {election_id: 1262, race_id: 10239},
-    {election_id: 1262, race_id: 10222},
-    {election_id: 2286, race_id: 10242},
-    {election_id: 2286, race_id: 10245},
-    {election_id: 4254, race_id: 10242},
-    {election_id: 4254, race_id: 10239},
-    {election_id: 8622, race_id: 10000}
-]
-
-rb.each do |rb|
-    ElectionsRace.create(rb)
 end

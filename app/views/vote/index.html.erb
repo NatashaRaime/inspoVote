@@ -1,0 +1,22 @@
+<%=
+@filteredElection.title
+%>
+
+
+<%@selectedRaces.each do |item|%>
+
+
+<label><%=Race.find(item.raceId).title%></label>
+   
+<% candidates = Candidate.where(raceId:item.raceId) %>
+
+<select id="race-<%=item.raceId%>">
+<%candidates.each do |candi|%>
+<option value ="<%=candi.candidateId%>" ><%=candi.name%><option>
+<%end%>
+</select>
+
+<%end%>
+
+<input type="submit"></input>
+

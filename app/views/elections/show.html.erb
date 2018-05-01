@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Electionid:</strong>
-  <%= @election.electionId %>
+  <% @info.each do |i| %>
+  <%= i.raceTitle %>
+   <%= i.candidate %>
+    <%= i.votes %>
+    <%end%>
 </p>
 
 <p>

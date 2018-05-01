@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_30_215343) do
+ActiveRecord::Schema.define(version: 2018_05_01_080132) do
 
-  create_table "candidates", force: :cascade do |t|
-    t.integer "candidateId"
+  create_table "candidates", primary_key: "candidateId", force: :cascade do |t|
     t.integer "raceId"
     t.integer "votes"
     t.string "name"
@@ -22,18 +21,14 @@ ActiveRecord::Schema.define(version: 2018_04_30_215343) do
     t.index ["candidateId"], name: "index_candidates_on_candidateId"
   end
 
-  create_table "districts", force: :cascade do |t|
-    t.integer "districtId"
+  create_table "districts", primary_key: "districtId", force: :cascade do |t|
     t.integer "stateId"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["districtId"], name: "index_districts_on_districtId"
-    t.index ["stateId"], name: "index_districts_on_stateId"
   end
 
-  create_table "elections", force: :cascade do |t|
-    t.integer "electionId"
+  create_table "elections", primary_key: "electionId", force: :cascade do |t|
     t.integer "districtId"
     t.datetime "electionDate"
     t.string "title"
@@ -44,24 +39,21 @@ ActiveRecord::Schema.define(version: 2018_04_30_215343) do
     t.index ["electionId"], name: "index_elections_on_electionId"
   end
 
-  create_table "races", force: :cascade do |t|
-    t.integer "raceId"
+  create_table "races", primary_key: "raceId",force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["raceId"], name: "index_races_on_raceId"
   end
 
-  create_table "states", force: :cascade do |t|
-    t.integer "stateId"
+  create_table "states",primary_key: "stateId", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stateId"], name: "index_states_on_stateId"
   end
 
-  create_table "voters", force: :cascade do |t|
-    t.integer "voterId"
+  create_table "voters", primary_key: "voterId",force: :cascade do |t|
     t.integer "districtId"
     t.string "name"
     t.string "email"
@@ -70,6 +62,13 @@ ActiveRecord::Schema.define(version: 2018_04_30_215343) do
     t.datetime "updated_at", null: false
     t.index ["districtId"], name: "index_voters_on_districtId"
     t.index ["voterId"], name: "index_voters_on_voterId"
+  end
+
+  create_table "elections_races", force: :cascade do |t|
+    t.integer "electionId"
+    t.integer "raceId"
+    t.index ["electionId"], name: "index_election_race_on_electionId"
+    t.index ["raceId"], name: "index_election_race_on_raceId"
   end
 
 end

@@ -1,0 +1,2 @@
+class ElectionsRace < ApplicationRecord
+end

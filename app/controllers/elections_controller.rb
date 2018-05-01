@@ -4,20 +4,14 @@ class ElectionsController < ApplicationController
   # GET /elections
   # GET /elections.json
   def index
-    @elections = Election.all.order(:districtId, :electionDate)
+    @elections = Election.all.order(:title)
     @districts = District.all
   end
 
   # GET /elections/1
   # GET /elections/1.json
   def show
-    #@races = Race.all
-    #TODO: @races.find(params[:electionId])
-    #for each race on the ballot, get the candidate in the race and their votes
-    #@candidates = Candidate.all
-    #candidate = Candidates.find(params[:raceId])
-    #cName = candidate.name
-    #currentVotes = candidate.votes 
+   
   end
 
   # GET /elections/new
